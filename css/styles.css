@@ -11,6 +11,12 @@
     --colorp: #757575;
     --colorfigcaption: #EEEEEE;
     --colorborder-bottom: #ECECEC;
+    --colorboxshadow: rgba(0, 0, 0, 0.15);
+    --colorteam: rgba(0, 0, 0, 0.12);
+    --colorteam2: rgba(0, 0, 0, 0.14);
+    --colorteam3: rgba(0, 0, 0, 0.2);
+    --tem: #F5F4FA;
+
 }
 
 
@@ -35,6 +41,7 @@ body {
 .container {
     width: 1200px;
     margin: 0 auto;
+    padding: 0px 15px;
 }
 
 
@@ -42,13 +49,18 @@ body {
 .header {
     background-color: var(--colorwhite);
     border-bottom: 1px solid var(--colorborder-bottom);
-    height: 80px;
 }
 
 .nav-bar {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    margin-right: 344px;
+}
+
+.nav__info {
+    position: absolute;
+    top: 5px;
+    left: 990px;
 }
 
 .nav__list,
@@ -66,7 +78,6 @@ body {
 }
 
 .nav__list {
-    margin-right: 340px;
     color: var(--texcolor);
 }
 
@@ -108,7 +119,6 @@ body {
 .hero {
     background: var(--backgroundfooter);
     color: var(--colorwhite);
-    height: 600px;
 }
 
 .column_h1 {
@@ -125,16 +135,16 @@ body {
     margin: 0 auto;
     display: block;
     font-family: inherit;
-    border: 2px solid var(--colorwhite);
     font-weight: 700;
-    line-height: 0.5;
+    line-height: 1.875;
     font-size: 16px;
-    height: 50px;
     color: var(--colorwhite);
     background: var(--background);
     padding: 10px 32px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px var(--colorboxshadow);
 }
 
 
@@ -190,7 +200,7 @@ body {
 
 /*team*/
 .team {
-    background-color: var(--colorbutton);
+    background-color: var(--tem);
 }
 
 .section-title {
@@ -211,6 +221,8 @@ body {
 
 .team_li {
     margin: auto;
+    box-shadow: 0px 1px 3px var(--colorteam), 0px 1px 1px var(--colorteam2), 0px 2px 1px var(--colorteam3);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .figcaption {
@@ -223,6 +235,9 @@ body {
     font-size: 16px;
     line-height: 1.17;
     text-align: center;
+
+
+
 }
 
 .figcaption_p {
@@ -233,14 +248,6 @@ body {
     text-align: center;
     color: var(--colorp);
 }
-
-.team_li:hover {
-    box-shadow: 0 0 2rem -0.7rem var(--colorbutton);
-    border: 1px solid var(--colorp);
-}
-
-
-
 
 /* Footer */
 .footer {
@@ -302,6 +309,7 @@ body {
     justify-content: center;
     list-style-type: none;
     margin-bottom: 50px;
+    padding-top: 94px;
 }
 
 
@@ -316,6 +324,10 @@ body {
     border-radius: 4px;
     padding: 6px 22px;
     margin-right: 8px;
+}
+
+.last {
+    margin-right: 0;
 }
 
 .submit_button:hover {
@@ -335,6 +347,8 @@ body {
     column-gap: 30px;
     flex-wrap: wrap;
     list-style-type: none;
+    padding-bottom: 94px;
+
 }
 
 .cards_li {
@@ -366,7 +380,9 @@ body {
 
 .portfolio_figcaption {
     width: 370px;
-    margin-top: -0.5rem;
     padding: 20px 24px;
-    border: 1px solid var(--colorfigcaption);
+    margin-top: -4px;
+    border-bottom: 1px solid var(--colorfigcaption);
+    border-left: 1px solid var(--colorfigcaption);
+    border-right: 1px solid var(--colorfigcaption);
 }
